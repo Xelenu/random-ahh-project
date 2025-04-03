@@ -1,18 +1,79 @@
-<style>
-    body {
-      background-color: black;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-</style>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‎ </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #555556;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .tab {
+            padding: 15px;
+            background: #444;
+            color: white;
+            border: none;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .tab:hover {
+            background: #666;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+            width: calc(100% - 250px);
+            text-align: center;
+            margin-left: 250px;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="tab" onclick="showContent('tab0')"><b>Information</b></button>
+        <button class="tab" onclick="showContent('tab1')">Translater*</button>
+        <button class="tab" onclick="showContent('tab2')">Speech</button>
+        <button class="tab" onclick="showContent('tab3')">Updates**</button>
+    </div>
+    <div id="tab0" class="content active">Content for Tab 0</div>
+    <div id="tab1" class="content"><!DOCTYPE html>
+        <html lang="en">
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>‎ </title>
           <style>
             html, body {
               margin: 0;
@@ -25,8 +86,8 @@
               display: block;
               position: fixed;
               top: 0;
-              left: 0;
-              width: 100%;
+              left: 50;
+              width: 83%;
               height: 100%;
               border: none;
               filter: invert(0.94) brightness(1.1);
@@ -36,4 +97,22 @@
         <body>
           <iframe src="https://lingojam.com/embed/2075540692" allowfullscreen></iframe>
         </body>
-        </html>
+        </html></div>
+    <div id="tab2" class="content">
+        <div class="message">Still in development</div>
+    </div>
+    <div id="tab3" class="content">Content for Tab 3</div>
+    
+    <script>
+        function showContent(tabId) {
+            let contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        window.onload = function() {
+            showContent('tab0');
+        }
+    </script>
+</body>
+</html>
