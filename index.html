@@ -66,7 +66,7 @@
     <div class="sidebar">
         <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
         <button class="tab" onclick="showContent('tab1')"><u>Translater*</u></button>
-        <button class="tab" onclick="showContent('tab2')"><b>Speech</b></button>
+        <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
         <button class="tab" onclick="showContent('tab3')">Updates**</button>
         <b>Language made by Ash, produced by WZ LLC</b>
     </div>
@@ -81,52 +81,61 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
       width: 100%;
       margin: 0;
-      background-color: black;
+      background-color: #555556;
       position: relative;
       padding: 20px;
       box-sizing: border-box;
+      color: #d3d3d3;
+    }
+
+    .container {
+      max-width: 1000px;
+      padding: 0 20px;
+      text-align: left;
+      margin-left: auto;
+      margin-right: 60px;
     }
 
     .surprise-text {
       font-size: 5rem;
       font-weight: bold;
-      color: #55CC25;
+      color: #d3d3d3;
       text-shadow: 
-        0 0 2px #55CC25, 
-        0 0 4px #55CC25, 
-        0 0 6px #55CC25, 
-        0 0 8px #55CC25, 
-        0 0 10px #55CC25;
-      text-align: center;
+        0 0 2px #d3d3d3, 
+        0 0 4px #d3d3d3, 
+        0 0 6px #d3d3d3, 
+        0 0 8px #d3d3d3, 
+        0 0 10px #d3d3d3;
+      text-align: left;
     }
 
     .motw-text {
       font-size: 2rem;
       font-weight: bold;
-      color: #55CC25;
-      text-shadow: 0 0 2px #55CC25, 0 0 4px #55CC25;
+      color: #d3d3d3;
+      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
       margin-top: 20px;
-      text-align: center;
+      text-align: left;
     }
 
     .smaller-text, .tiny-text, .about-text, .copyright-text {
       font-weight: bold;
-      color: #55CC25;
-      text-shadow: 0 0 1px #55CC25, 0 0 2px #55CC25;
-      text-align: center;
+      color: #d3d3d3;
+      text-shadow: 0 0 1px #d3d3d3, 0 0 2px #d3d3d3;
+      text-align: left;
     }
 
     .link-text a {
-      color: #55CC25;
+      color: #d3d3d3;
       font-size: 3rem;
       font-weight: bold;
       text-decoration: underline;
-      text-shadow: 0 0 10px #55CC25, 0 0 2px #55CC25;
-      text-align: center;
+      text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
+      text-align: left;
     }
 
     .spacer {
@@ -136,15 +145,16 @@
     .about-heading {
       font-size: 2rem;
       font-weight: bold;
-      color: #55CC25;
-      text-shadow: 0 0 2px #55CC25, 0 0 4px #55CC25;
+      color: #d3d3d3;
+      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
       margin-top: 50px;
-      text-align: center;
+      text-align: left;
     }
 
     .about-text {
       font-size: 1.5rem;
       margin-top: 10px;
+      color: #d3d3d3;
     }
 
     .copyright-text {
@@ -155,68 +165,75 @@
     .other-links-heading {
       font-size: 2rem;
       font-weight: bold;
-      color: #55CC25;
-      text-shadow: 0 0 4px #55CC25, 0 0 8px #55CC25;
+      color: #d3d3d3;
+      text-shadow: 0 0 4px #d3d3d3, 0 0 8px #d3d3d3;
       margin-top: 50px;
-      text-align: center;
+      text-align: left;
     }
 
     .other-link {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #55CC25;
-      text-shadow: 0 0 2px #55CC25, 0 0 4px #55CC25;
+      color: #d3d3d3;
+      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
       margin-top: 10px;
-      text-align: center;
+      text-align: left;
     }
 
     .other-link a {
-      color: #55CC25;
+      color: #d3d3d3;
       text-decoration: underline;
     }
 
-    /* Custom Scrollbar Styles */
     ::-webkit-scrollbar {
       width: 12px;
       height: 12px;
     }
 
     ::-webkit-scrollbar-track {
-      background-color: black;
+      background-color: #555556;
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: #55CC25;
+      background-color: #d3d3d3;
       border-radius: 10px;
-      box-shadow: 0 0 10px #55CC25, 0 0 20px #55CC25;
+      box-shadow: 0 0 10px #d3d3d3, 0 0 20px #d3d3d3;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: #55CC25;
-      box-shadow: 0 0 15px #55CC25, 0 0 25px #55CC25;
+      background-color: #d3d3d3;
+      box-shadow: 0 0 15px #d3d3d3, 0 0 25px #d3d3d3;
     }
 
-    /* Firefox Scrollbar */
     * {
       scrollbar-width: thin;
-      scrollbar-color: #55CC25 black;
+      scrollbar-color: #d3d3d3 #555556;
     }
   </style>
 </head>
 <body>
-  <p class="motw-text">One-thousand words for Chesao will come in..</p>
-  
-  <h1 class="surprise-text">Two weeks ETA!</h1>
+  <div class="container">
+    <p class="motw-text">Thanks for learning Chesao!</p>
 
-  <h2 class="about-heading">3/6/25 to 3/20/25 - 4/10/25</h2>
-  
-  <p class="link-text"><a href="https://chesao.lol/">Go back</a></p>
+    <h1 class="motw-text">ATTENTION:</h1>
 
-  <div class="spacer"></div>
-  
-  <p class="copyright-text">2025 © Copyright <a href="https://chesao.lol/" style="color: #55CC25; text-decoration: underline;">https://chesao.lol/</a>, language made by Asher, and maintained by <a href="mailto:studentaccbro@gmail.com" style="color: #55CC25; text-decoration: underline;">Wilbur</a>.</p>
+    <h2 class="about-heading">
+      There are fakers out there, the only official website for Chesao is
+      <a href="https://chesao.lol/" target="_blank" style="color: #d3d3d3;">this</a>
+      and the website you are currently on.
+    </h2>
+    
+    <h3 class="about-heading">(PLEASE, DO NOT LEAK THIS AS THIS WEBSITE IS NOT PASSWORD PROTECTED)</h3>
+    
+    <h4 class="about-heading">Credits:</h3>
+
+    <p class="link-text"><a href="https://chesao.lol/">Go back</a></p>
+
+    <div class="spacer"></div>
+  </div>
 </body>
-</html></div>
+</html>
+</div>
     <div id="tab1" class="content"><!DOCTYPE html>
         <html lang="en">
         <head>
@@ -235,7 +252,7 @@
               position: fixed;
               top: 0;
               left: 50;
-              width: 83%;
+              width: 84%;
               height: 100%;
               border: none;
               filter: invert(0.83) brightness(1.1);
