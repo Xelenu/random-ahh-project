@@ -63,12 +63,13 @@
 </head>
 <body>
     <div class="sidebar">
-        <button class="tab" onclick="showContent('tab0')"><b>Information</b></button>
-        <button class="tab" onclick="showContent('tab1')">Translater*</button>
-        <button class="tab" onclick="showContent('tab2')">Speech</button>
+        <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
+        <button class="tab" onclick="showContent('tab1')"><u>Translater*</u></button>
+        <button class="tab" onclick="showContent('tab2')"><b>Speech</b></button>
         <button class="tab" onclick="showContent('tab3')">Updates**</button>
+        <b>Language made by Ash, produced by WZ LLC</b>
     </div>
-    <div id="tab0" class="content active">Content for Tab 0</div>
+    <div id="tab0" class="content active"><i>Thanks for speaking Chesao!</i></div>
     <div id="tab1" class="content"><!DOCTYPE html>
         <html lang="en">
         <head>
@@ -102,7 +103,6 @@
         <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development Message</title>
     <style>
         body {
             display: flex;
@@ -122,7 +122,27 @@
     <div class="message">Still in development</div>
 </body>
     </div>
-    <div id="tab3" class="content">Content for Tab 3</div>
+    <div id="tab3" class="content"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .message {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">There are currently no updates for now...</div>
+</body></div>
     
     <script>
         function showContent(tabId) {
