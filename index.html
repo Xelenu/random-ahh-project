@@ -336,43 +336,74 @@
     <div class="message"><b class="surprise-text">Still in development</b></div>
 </body>
     </div>
-    <div id="tab3" class="content"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <div id="tab3" class="content">
     <style>
-        body {
+        .updates-wrapper {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
+            height: 100%;
         }
+
         .message {
             font-size: 40px;
             font-weight: bold;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .surprise-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #d3d3d3;
+            text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
+        }
+
+        .motw-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d3d3d3;
+            text-shadow: 0 0 2px #d3d3d3;
+        }
+
+        .about-heading {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d3d3d3;
+            text-shadow: 0 0 4px #d3d3d3;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .spacer {
+            height: 50px;
         }
     </style>
-</head>
-<body>
-    <div class="message"><b class="surprise-text">Updates</b>
-    <div class="message">
-    <a href="https://wb4zhzsax9vfosf.skigma.site/previous-updates.txt" style="text-decoration: none; color: inherit;">
-        <b class="motw-text"><u>Previous update logs</u></b>
-    </a>
+
+    <div class="updates-wrapper">
+        <div class="message"><b class="surprise-text">Updates</b></div>
+
+        <div class="message">
+            <a href="https://wb4zhzsax9vfosf.skigma.site/previous-updates.txt">
+                <b class="motw-text"><u>Previous update logs</u></b>
+            </a>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="message"><b class="about-heading">Chesao:</b></div>
+        <div class="message"><b class="motw-text">Development for Chesao is paused.</b></div>
+
+        <div class="spacer"></div>
+
+        <div class="message"><b class="about-heading">Yapish:</b></div>
+        <div class="message"><b class="motw-text">...</b></div>
+    </div>
 </div>
-
-<div class="spacer"></div>
-
-<div class="message"><b class="about-heading">Chesao:</b>
-<div class="message"><b class="motw-text">Development for Chesao is paused.
-
-<div class="spacer"></div>
-
-<div class="message"><b class="about-heading">Yapish:</b>
-<div class="message"><b class="motw-text">...</b>
-
-</body></div>
     
     <script>
         function showContent(tabId) {
