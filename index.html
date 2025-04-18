@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>‎ </title>
+    <title>Chesao Language</title>
     <style>
         body {
             margin: 0;
@@ -11,6 +11,7 @@
             background-color: #555556;
             display: flex;
             height: 100vh;
+            font-family: Arial, sans-serif;
         }
         .sidebar {
             width: 250px;
@@ -28,16 +29,15 @@
             justify-content: center;
             z-index: 9999;
         }
-        
         .sussy-text {
-      font-size: 24px; /* Change this value to adjust text size */
-    }
-    
-    .skibidi-link {
-      color: #555; /* Link color */
-      text-decoration: underline;
-    }
-    
+            font-size: 24px;
+            color: #d3d3d3;
+            text-align: center;
+        }
+        .skibidi-link {
+            color: #555;
+            text-decoration: underline;
+        }
         .tab {
             padding: 15px;
             background: #444;
@@ -61,290 +61,15 @@
             background: #222;
             color: white;
             border-radius: 10px;
-            width: calc(100% - 250px);
-            text-align: center;
-            margin-left: 250px;
+            width: calc(100% - 270px);
+            margin-left: 270px;
             height: 100vh;
             overflow-y: auto;
+            box-sizing: border-box;
         }
-        .active {
+        .content.active {
             display: block;
         }
-    </style>
-</head>
-<body>
-    <div class="sidebar">
-        <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
-        <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
-        <button class="tab" onclick="showContent('tab1')"><u>Chesao Translator*</u></button>
-        <button class="tab" onclick="showContent('tab-1')"><u>Yapish Translator*</u></button>
-        <button class="tab" onclick="showContent('tab3')">Updates**</button>
-        <b class="sussy-text">Language made by Ash, produced by <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a></b>
-        <b class="spacer"></b>
-        <b class="sussy-text">*Not always accurate</b>
-        <i>**Sometimes not up to date</i>
-    </div>
-    <div id="tab0" class="content active"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      min-height: 100vh;
-      width: 100%;
-      margin: 0;
-      background-color: #555556;
-      position: relative;
-      padding: 20px;
-      box-sizing: border-box;
-      color: #d3d3d3;
-    }
-
-    .container {
-      max-width: 1000px;
-      padding: 0 20px;
-      text-align: left;
-      margin-left: auto;
-      margin-right: 60px;
-    }
-
-    .surprise-text {
-      font-size: 5rem;
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 
-        0 0 2px #d3d3d3, 
-        0 0 4px #d3d3d3, 
-        0 0 6px #d3d3d3, 
-        0 0 8px #d3d3d3, 
-        0 0 10px #d3d3d3;
-      text-align: left;
-    }
-
-    .motw-text {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    .smaller-text, .tiny-text, .about-text, .copyright-text {
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 0 0 1px #d3d3d3, 0 0 2px #d3d3d3;
-      text-align: left;
-    }
-
-    .link-text a {
-      color: #d3d3d3;
-      font-size: 3rem;
-      font-weight: bold;
-      text-decoration: underline;
-      text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
-      text-align: left;
-    }
-
-    .spacer {
-      height: 100px;
-    }
-
-    .about-heading {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    .about-text {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      color: #d3d3d3;
-    }
-
-    .copyright-text {
-      font-size: 1.2rem;
-      margin-top: 50px;
-    }
-
-    .other-links-heading {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 0 0 4px #d3d3d3, 0 0 8px #d3d3d3;
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    .other-link {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #d3d3d3;
-      text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .other-link a {
-      color: #d3d3d3;
-      text-decoration: underline;
-    }
-
-    ::-webkit-scrollbar {
-      width: 12px;
-      height: 12px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: #555556;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #d3d3d3;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #d3d3d3, 0 0 20px #d3d3d3;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #d3d3d3;
-      box-shadow: 0 0 15px #d3d3d3, 0 0 25px #d3d3d3;
-    }
-
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: #d3d3d3 #555556;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <p class="motw-text">Thanks for learning Chesao!</p>
-
-    <h1 class="motw-text">ATTENTION:</h1>
-
-    <h2 class="about-heading">
-      There are fakers out there, the only official website for Chesao is
-      <a href="https://chesao.lol/" target="_blank" style="color: #d3d3d3;">this</a>
-      and the website you are currently on.
-    </h2>
-    
-    <h3 class="about-heading">(PLEASE, DO NOT LEAK THIS AS THIS WEBSITE IS NOT PASSWORD PROTECTED)</h3>
-    
-    <h4 class="about-heading">Credits:</h4>
-    
-    <p class="about-heading">Ash for the Language speaking, Godo (honorable mention), and WZ for the coding of the website. Scroll down to see more!</p>
-
-    <div class="spacer"></div>
-
-    <h5 class="about-heading">Due to a rat (Leaker) that exposed all the "bad" words to the office, we've decided to shutdown those words until it's safe.</h5>
-    
-    <p class="about-heading">People tricked to hail Godo (lifetime, i dont really think there is a point in this anymore):</p>
-    
-    <p class="surprise-text"><a href="https://wb4zhzsax9vfosf.skigma.site/tricked.txt" target="_blank" style="color: inherit; text-decoration: none;"><u>7</u></a></p>
-    
-    <p class="link-text"><a href="https://discord.gg/Ans6ahyxY3">Our Discord</a></p>
-  </div>
-</body>
-</html>
-</div>
-
-    <div id="tab-1" class="content"><!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <style>
-            html, body {
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              height: 100%;
-              overflow: hidden;
-            }
-            iframe {
-              display: block;
-              position: fixed;
-              top: 0;
-              left: 50;
-              width: 84%;
-              height: 100%;
-              border: none;
-              filter: invert(0.83) brightness(1.1);
-            }
-          </style>
-        </head>
-        <body>
-          <iframe src="https://lingojam.com/embed/yapishspeak" allowfullscreen></iframe>
-        </body>
-        </html></div>
-    <div id="tab1" class="content"><!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <style>
-            html, body {
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              height: 100%;
-              overflow: hidden;
-            }
-            iframe {
-              display: block;
-              position: fixed;
-              top: 0;
-              left: 50;
-              width: 84%;
-              height: 100%;
-              border: none;
-              filter: invert(0.83) brightness(1.1);
-            }
-          </style>
-        </head>
-        <body>
-          <iframe src="https://lingojam.com/embed/2075540692" allowfullscreen></iframe>
-        </body>
-        </html></div>
-    <div id="tab2" class="content">
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .message {
-            font-size: 40px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="message"><b class="surprise-text">Speech/Writing</b>
-    <div class="spacer"></div>
-    <div class="message"><b class="motw-text"><u><a href="https://0036372210.craz.top/s/" target="_blank">Speech</a></u>
-    <div class="spacer">
-    <div class="message"><b class="motw-text"><u><a href="https://0036372210.craz.top/w/" target="_blank">Writing</a></u>
-    </div>
-</body>
-    </div>
-   <div id="tab3" class="content">
-    <style>
         .updates-wrapper {
             display: flex;
             flex-direction: column;
@@ -352,83 +77,135 @@
             align-items: center;
             height: 100%;
         }
-
         .message {
             font-size: 40px;
             font-weight: bold;
             text-align: center;
             margin: 20px;
         }
-
         .surprise-text {
             font-size: 3rem;
             font-weight: bold;
             color: #d3d3d3;
             text-shadow: 0 0 2px #d3d3d3, 0 0 4px #d3d3d3;
         }
-
         .motw-text {
             font-size: 1.5rem;
             font-weight: bold;
             color: #d3d3d3;
             text-shadow: 0 0 2px #d3d3d3;
         }
-
         .about-heading {
             font-size: 2rem;
             font-weight: bold;
             color: #d3d3d3;
             text-shadow: 0 0 4px #d3d3d3;
         }
-
         a {
             color: inherit;
             text-decoration: none;
         }
-
         .spacer {
             height: 50px;
         }
     </style>
-
-    <div class="updates-wrapper">
-        <div class="message"><b class="surprise-text">Updates</b></div>
-
-        <div class="message">
-            <a href="https://wb4zhzsax9vfosf.skigma.site/previous-updates.txt">
-                <b class="motw-text"><u>Previous update logs</u></b>
-            </a>
-        </div>
-
+</head>
+<body>
+    <div class="sidebar">
+        <button class="tab" onclick="showContent('tab0')">Information</button>
+        <button class="tab" onclick="showContent('tab2')">Speech/Writing</button>
+        <button class="tab" onclick="showContent('tab1')">Chesao Translator*</button>
+        <button class="tab" onclick="showContent('tab-1')">Yapish Translator*</button>
+        <button class="tab" onclick="showContent('tab3')">Updates**</button>
+        <div class="sussy-text">Language made by Ash, produced by <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a></div>
         <div class="spacer"></div>
-
-        <div class="message"><b class="about-heading">Chesao:</b></div>
-        <div class="message"><b class="motw-text">Development for Characters (Writing) has started, more information will be shown here soon.</b>
-        <div class="spacer">
-        <div class="message"><b class="motw-text">Landon<br>
-        Shoe<br>
-        Puna to "help"<br>
-        Bifo to "me"<br>
-        Removal of "te"<br>
-        </div>
-
-        <div class="spacer"></div>
-
-        <div class="message"><b class="about-heading">Yapish:</b></div>
-        <div class="message"><b class="motw-text">...</b></div>
+        <div class="sussy-text">*Not always accurate</div>
+        <div class="sussy-text">**Sometimes not up to date</div>
     </div>
-</div>
-    
+
+    <div id="tab0" class="content active">
+        <div class="container">
+            <p class="motw-text">Thanks for learning Chesao!</p>
+            <h1 class="motw-text">ATTENTION:</h1>
+            <h2 class="about-heading">
+                There are fakers out there, the only official website for Chesao is
+                <a href="https://chesao.lol/" target="_blank" style="color: #d3d3d3;">this</a>
+                and the website you are currently on.
+            </h2>
+            <h3 class="about-heading">(PLEASE, DO NOT LEAK THIS AS THIS WEBSITE IS NOT PASSWORD PROTECTED)</h3>
+            <h4 class="about-heading">Credits:</h4>
+            <p class="about-heading">Ash for the Language speaking, Godo (honorable mention), and WZ for the coding of the website.</p>
+            <div class="spacer"></div>
+            <h5 class="about-heading">Due to a rat (Leaker) that exposed all the "bad" words to the office, we've decided to shutdown those words until it's safe.</h5>
+            <p class="about-heading">People tricked to hail Godo (lifetime, i dont really think there is a point in this anymore):</p>
+            <p class="surprise-text"><a href="https://wb4zhzsax9vfosf.skigma.site/tricked.txt" target="_blank" style="color: inherit; text-decoration: none;"><u>7</u></a></p>
+            <p class="link-text"><a href="https://discord.gg/Ans6ahyxY3">Our Discord</a></p>
+        </div>
+    </div>
+
+    <div id="tab-1" class="content">
+        <iframe src="https://lingojam.com/embed/yapishspeak" style="width: 100%; height: 100%; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
+    </div>
+
+    <div id="tab1" class="content">
+        <iframe src="https://lingojam.com/embed/2075540692" style="width: 100%; height: 100%; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
+    </div>
+
+    <div id="tab2" class="content">
+        <div class="updates-wrapper">
+            <div class="message"><b class="surprise-text">Speech/Writing</b></div>
+            <div class="spacer"></div>
+            <div class="message"><b class="motw-text"><u><a href="https://0036372210.craz.top/s/" target="_blank">Speech</a></u></b></div>
+            <div class="spacer"></div>
+            <div class="message"><b class="motw-text"><u><a href="https://0036372210.craz.top/w/" target="_blank">Writing</a></u></b></div>
+        </div>
+    </div>
+
+    <div id="tab3" class="content">
+        <div class="updates-wrapper">
+            <div class="message"><b class="surprise-text">Updates</b></div>
+            <div class="message">
+                <a href="https://wb4zhzsax9vfosf.skigma.site/previous-updates.txt">
+                    <b class="motw-text"><u>Previous update logs</u></b>
+                </a>
+            </div>
+            <div class="spacer"></div>
+            <div class="message"><b class="about-heading">Chesao:</b></div>
+            <div class="message">
+                <b class="motw-text">Development for Characters (Writing) has started, more information will be shown here soon.</b>
+            </div>
+            <div class="message">
+                <b class="motw-text">Landon<br>Shoe<br>Puna to "help"<br>Bifo to "me"<br>Removal of "te"</b>
+            </div>
+            <div class="spacer"></div>
+            <div class="message"><b class="about-heading">Yapish:</b></div>
+            <div class="message"><b class="motw-text">...</b></div>
+        </div>
+    </div>
+
     <script>
         function showContent(tabId) {
-            let contents = document.querySelectorAll('.content');
-            contents.forEach(content => content.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
+            try {
+                // Hide all content divs
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                // Show the selected tab
+                const tab = document.getElementById(tabId);
+                if (tab) {
+                    tab.classList.add('active');
+                } else {
+                    console.error(`Tab with ID ${tabId} not found`);
+                }
+            } catch (error) {
+                console.error('Error in showContent:', error);
+            }
         }
 
+        // Initialize the default tab
         window.onload = function() {
             showContent('tab0');
-        }
+        };
     </script>
 </body>
 </html>
