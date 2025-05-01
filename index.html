@@ -24,6 +24,10 @@
       flex-direction: column;
       align-items: center;
       z-index: 9999;
+      transition: all 0.3s ease-in-out;
+    }
+    .sidebar.hidden {
+      bottom: -100%;
     }
     .tabs-wrapper {
       display: flex;
@@ -33,17 +37,17 @@
       margin-bottom: 10px;
     }
     .tab {
-      padding: 20px;            /* increased padding */
+      padding: 20px;
       background: #444;
       color: white;
       border: none;
-      margin: 8px;              /* slightly more margin */
+      margin: 8px;
       text-align: center;
       cursor: pointer;
       border-radius: 10px;
       transition: all 0.3s ease;
-      font-size: 16px;          /* larger font */
-      min-width: 140px;         /* wider buttons */
+      font-size: 16px;
+      min-width: 140px;
     }
     .tab:hover {
       background: #666;
@@ -67,7 +71,7 @@
       color: white;
       border-radius: 10px;
       width: calc(100% - 40px);
-      margin: 20px auto 140px auto; /* extra bottom margin for larger bar */
+      margin: 20px auto 140px auto;
       box-sizing: border-box;
       max-width: 1000px;
     }
@@ -118,6 +122,20 @@
       color: #d3d3d3;
       text-decoration: underline;
       text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
+    }
+    .toggle-button {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #838383;
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10000;
+      transition: transform 0.3s ease-in-out;
     }
   </style>
 </head>
@@ -198,10 +216,19 @@
     <i class="sussy-text">**Sometimes not up to date</i>
   </div>
 
+  <button class="toggle-button" id="toggleButton" onclick="toggleSidebar()">v</button>
+
   <script>
     function showContent(tabId) {
       document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const toggleButton = document.getElementById('toggleButton');
+      sidebar.classList.toggle('hidden');
+      toggleButton.textContent = sidebar.classList.contains('hidden') ? '^' : 'v';
     }
 
     window.onload = () => showContent('tab0');
