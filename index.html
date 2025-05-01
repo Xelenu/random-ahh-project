@@ -1,214 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>‎ </title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #555556;
-            display: flex;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            background: #333;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            padding: 10px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        .sussy-text {
-            font-size: 24px;
-            color: #d3d3d3;
-            text-align: center;
-        }
-        .skibidi-link {
-            color: #555;
-            text-decoration: underline;
-        }
-        .tab {
-            padding: 15px;
-            background: #444;
-            color: white;
-            border: none;
-            width: 100%;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-        .tab:hover {
-            background: #666;
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .content {
-            display: none;
-            padding: 20px;
-            background: #222;
-            color: white;
-            border-radius: 10px;
-            width: calc(100% - 270px);
-            margin-left: 270px;
-            height: 100vh;
-            overflow-y: auto;
-            box-sizing: border-box;
-        }
-        .active {
-            display: block;
-        }
-        .updates-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        .message {
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px;
-        }
-        .surprise-text {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-shadow: 0 0 4px #ffffff, 0 0 8px #d3d3d3;
-            letter-spacing: 1px;
-        }
-        .motw-text {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #d3d3d3;
-            text-shadow: 0 0 2px #d3d3d3;
-        }
-        .about-heading {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #d3d3d3;
-            text-shadow: 0 0 4px #d3d3d3;
-        }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .spacer {
-            height: 50px;
-        }
-        .container {
-            max-width: 1000px;
-            padding: 0 20px;
-            text-align: left;
-            margin-left: auto;
-            margin-right: 60px;
-        }
-        .link-text a {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #d3d3d3;
-            text-decoration: underline;
-            text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>‎ </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #555556;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar {
+      width: 100%;
+      background: #333;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 9999;
+    }
+    .tabs-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .tab {
+      padding: 20px;            /* increased padding */
+      background: #444;
+      color: white;
+      border: none;
+      margin: 8px;              /* slightly more margin */
+      text-align: center;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-size: 16px;          /* larger font */
+      min-width: 140px;         /* wider buttons */
+    }
+    .tab:hover {
+      background: #666;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .sussy-text {
+      font-size: 14px;
+      color: #d3d3d3;
+      text-align: center;
+      margin: 2px 0;
+    }
+    .skibidi-link {
+      color: #555;
+      text-decoration: underline;
+    }
+    .content {
+      display: none;
+      padding: 20px;
+      background: #222;
+      color: white;
+      border-radius: 10px;
+      width: calc(100% - 40px);
+      margin: 20px auto 140px auto; /* extra bottom margin for larger bar */
+      box-sizing: border-box;
+      max-width: 1000px;
+    }
+    .active {
+      display: block;
+    }
+    .updates-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .message {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px;
+    }
+    .surprise-text {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 0 4px #ffffff, 0 0 8px #d3d3d3;
+      letter-spacing: 1px;
+    }
+    .motw-text {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #d3d3d3;
+      text-shadow: 0 0 2px #d3d3d3;
+    }
+    .about-heading {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d3d3d3;
+      text-shadow: 0 0 4px #d3d3d3;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .spacer {
+      height: 50px;
+    }
+    .link-text a {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d3d3d3;
+      text-decoration: underline;
+      text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar">
-        <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
-        <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
-        <button class="tab" onclick="showContent('tab1')"><u>Chesao Translator*</u></button>
-        <button class="tab" onclick="showContent('tab-1')"><u>Yapish Translator*</u></button>
-        <button class="tab" onclick="showContent('tab3')">Updates**</button>
-        <b class="sussy-text">Language(s) made by Ash, produced by <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a></b>
+  <div id="tab0" class="content active">
+    <p class="motw-text">Thanks for learning Chesao!</p>
+    <h1 class="surprise-text">ATTENTION:</h1>
+    <h2 class="about-heading">
+      There are fakers out there, the only official website for Chesao is
+      <a href="https://chesao.lol/" target="_blank" style="color: #d3d3d3;">this</a>
+      and the website you are currently on.
+    </h2>
+    <h3 class="about-heading">(IF YOU SOMEHOW FOUND THE (HIDDEN) LINK, PLEASE, DO NOT LEAK IT AS THIS WEBSITE IS NOT PASSWORD PROTECTED)</h3>
+    <h4 class="about-heading">Credits:</h4>
+    <p class="about-heading">Ash for the Language speaking, Godo (honorable mention), and WZ for the coding of the website. Scroll down to see more!</p>
+    <div class="spacer"></div>
+    <h5 class="about-heading">Email "audio@chesao.lol" audio files of Chesao words for some rewards* (must be pronounced right)!</h5>
+    <i class="small-text">*Rewards will be given out at school; put your name in the E-mail; rewards can vary.</i>
+    <h6 class="about-heading">Due to a rat (Leaker) that exposed all the "bad" words to the office, we've decided to shutdown those words until it's safe.</h6>
+    <p class="about-heading">People tricked to hail Godo (lifetime, i dont really think there is a point in this anymore):</p>
+    <p class="surprise-text"><a href="https://zeta7g.completethe.forum/tricked.txt" style="color: inherit; text-decoration: none;"><u>7</u></a></p>
+    <p class="link-text"><a href="https://discord.gg/Ans6ahyxY3" target="_blank">Our Discord</a></p>
+  </div>
+
+  <div id="tab1" class="content">
+    <iframe src="https://lingojam.com/embed/2075540692" style="width: 100%; height: 80vh; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
+  </div>
+
+  <div id="tab-1" class="content">
+    <iframe src="https://lingojam.com/embed/yapishspeak" style="width: 100%; height: 80vh; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
+  </div>
+
+  <div id="tab2" class="content">
+    <iframe src="https://bro.youis.gay/uv/service/hvtrs8%2F-sktgs%2Cgmoelg.aoo%2Ftigw-023%3B3%3B5307%2Fraee%3Dawtjuqep%3D3" style="width: 100%; height: 80vh; border: none;" allowfullscreen></iframe>
+  </div>
+
+  <div id="tab3" class="content">
+    <div class="updates-wrapper">
+      <div class="message"><b class="surprise-text">Updates</b></div>
+      <div class="message">
+        <a href="https://zeta7g.completethe.forum/previous-updates.txt">
+          <b class="motw-text"><u>Previous/current update logs</u></b>
+        </a>
+      </div>
+      <div class="spacer"></div>
+      <div class="message"><b class="about-heading">Chesao/Website:</b></div>
+      <div class="message">
+        <b class="motw-text">Chesao: Ash still has still not given me the audio files.</b>
+      </div>
+      <div class="message">
+        <i class="motw-text">
+          Big update, click <a href="https://zeta7g.completethe.forum/4-27-2025.txt" style="font-weight: bold; text-decoration: underline;">here</a> to see the list of the new words and information.
+        </i>
         <div class="spacer"></div>
-        <b class="sussy-text">*Not always accurate</b>
-        <i class="sussy-text">**Sometimes not up to date</i>
+        <b class="motw-text">Website: first ever audio came!!1! (chesao page in "Speech/Writing")</b>
+      </div>
+      <div class="spacer"></div>
+      <div class="message"><b class="about-heading">Yapish:</b></div>
+      <div class="message"><b class="motw-text">...</b></div>
     </div>
+  </div>
 
-    <div id="tab0" class="content active">
-        <div class="container">
-            <p class="motw-text">Thanks for learning Chesao!</p>
-            <h1 class="surprise-text">ATTENTION:</h1>
-            <h2 class="about-heading">
-                There are fakers out there, the only official website for Chesao is
-                <a href="https://chesao.lol/" target="_blank" style="color: #d3d3d3;">this</a>
-                and the website you are currently on.
-            </h2>
-            <h3 class="about-heading">(IF YOU SOMEHOW FOUND THE (HIDDEN) LINK, PLEASE, DO NOT LEAK IT AS THIS WEBSITE IS NOT PASSWORD PROTECTED)</h3>
-            <h4 class="about-heading">Credits:</h4>
-            <p class="about-heading">Ash for the Language speaking, Godo (honorable mention), and WZ for the coding of the website. Scroll down to see more!</p>
-            <div class="spacer"></div>
-            <h5 class="about-heading">Email "audio@chesao.lol" audio files of Chesao words for some rewards* (must be pronounced right)!</h5>
-            <i class="small-text">*Rewards will be given out at school; put your name in the E-mail; rewards can vary.</i>
-            <h6 class="about-heading">Due to a rat (Leaker) that exposed all the "bad" words to the office, we've decided to shutdown those words until it's safe.</h6>
-            <p class="about-heading">People tricked to hail Godo (lifetime, i dont really think there is a point in this anymore):</p>
-            <p class="surprise-text"><a href="https://zeta7g.completethe.forum/tricked.txt" style="color: inherit; text-decoration: none;"><u>7</u></a></p>
-            <p class="link-text"><a href="https://discord.gg/Ans6ahyxY3" target="_blank">Our Discord</a></p>
-        </div>
+  <div class="sidebar">
+    <div class="tabs-wrapper">
+      <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
+      <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
+      <button class="tab" onclick="showContent('tab1')"><u>Chesao Translator*</u></button>
+      <button class="tab" onclick="showContent('tab-1')"><u>Yapish Translator*</u></button>
+      <button class="tab" onclick="showContent('tab3')">Updates**</button>
     </div>
+    <b class="sussy-text">Language(s) made by Ash, produced by <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a></b>
+    <b class="sussy-text">*Not always accurate</b>
+    <i class="sussy-text">**Sometimes not up to date</i>
+  </div>
 
-    <div id="tab1" class="content">
-        <iframe src="https://lingojam.com/embed/2075540692" style="width: 100%; height: 100%; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
-    </div>
+  <script>
+    function showContent(tabId) {
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
 
-    <div id="tab-1" class="content">
-        <iframe src="https://lingojam.com/embed/yapishspeak" style="width: 100%; height: 100%; border: none; filter: invert(0.83) brightness(1.1);" allowfullscreen></iframe>
-    </div>
-
-    <div id="tab2" class="content">
-       <iframe src="https://bro.youis.gay/uv/service/hvtrs8%2F-sktgs%2Cgmoelg.aoo%2Ftigw-023%3B3%3B5307%2Fraee%3Dawtjuqep%3D3" style="width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
-    </div>
-
-    <div id="tab3" class="content">
-        <div class="updates-wrapper">
-            <div class="message"><b class="surprise-text">Updates</b></div>
-            <div class="message">
-                <a href="https://zeta7g.completethe.forum/previous-updates.txt">
-                    <b class="motw-text"><u>Previous/current update logs</u></b>
-                </a>
-            </div>
-            <div class="spacer"></div>
-            <div class="message"><b class="about-heading">Chesao/Website:</b></div>
-            <div class="message">
-                <b class="motw-text">Chesao: Ash still has still not given me the audio files.</b>
-            </div>
-            <div class="message">
-                <i class="motw-text">
-  Big update, click <a href="https://zeta7g.completethe.forum/4-27-2025.txt" style="font-weight: bold; text-decoration: underline;">here</a> to see the list of the new words and information.
-</i>
-<div class"spacer"></div>
-                <b class="motw-text">Website: first ever audio came!!1! (chesao page in "Speech/Writing")</b>
-            </div>
-            <div class="spacer"></div>
-            <div class="message"><b class="about-heading">Yapish:</b></div>
-            <div class="message"><b class="motw-text">...</b></div>
-        </div>
-    </div>
-
-    <script>
-        function showContent(tabId) {
-            let contents = document.querySelectorAll('.content');
-            contents.forEach(content => content.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-        }
-
-        window.onload = function() {
-            showContent('tab0');
-        }
-    </script>
+    window.onload = () => showContent('tab0');
+  </script>
 </body>
 </html>
