@@ -5,12 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>‎ </title>
   <style>
+    /* 1. Particles behind everything */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* 2. Body background */
     body {
       margin: 0;
       padding: 0;
       background-color: #555556;
       font-family: Arial, sans-serif;
+      position: relative;
+      z-index: 0;
     }
+
     .sidebar {
       width: 100%;
       background: #333;
@@ -18,7 +32,7 @@
       border-top-right-radius: 15px;
       padding: 10px;
       position: fixed;
-      bottom: 0;
+      bottom: 0px;
       left: 0;
       display: flex;
       flex-direction: column;
@@ -26,7 +40,7 @@
       z-index: 9999;
       transition: all 0.3s ease-in-out;
     }
-     .corner-image {
+    .corner-image {
       position: fixed;
       bottom: 20px;
       z-index: 10000;
@@ -148,6 +162,10 @@
   </style>
 </head>
 <body>
+  <!-- Background Particles Container -->
+  <div id="particles-js"></div>
+
+  <!-- Content Sections -->
   <div id="tab0" class="content active">
     <p class="motw-text">Thanks for learning Chesao!</p>
     <h1 class="surprise-text">ATTENTION:</h1>
@@ -234,8 +252,44 @@
   <button class="toggle-button" id="toggleButton" onclick="toggleSidebar()">v</button>
 
   <img src="https://raw.githubusercontent.com/worspaces/thesigma/refs/heads/main/images/ai.png" alt="WZ" draggable=false class="corner-image">
-  
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
+    // Load particles config
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 100 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 2 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
     function showContent(tabId) {
       document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
