@@ -26,6 +26,14 @@
       z-index: 9999;
       transition: all 0.3s ease-in-out;
     }
+     .corner-image {
+      position: fixed;
+      bottom: 20px;
+      z-index: 10000;
+      left: 20px;
+      width: 50px;
+      height: auto;
+    }
     .sidebar.hidden {
       bottom: -100%;
     }
@@ -218,6 +226,8 @@
 
   <button class="toggle-button" id="toggleButton" onclick="toggleSidebar()">v</button>
 
+  <img src="https://raw.githubusercontent.com/worspaces/thesigma/refs/heads/main/images/ai.png" alt="WZ" draggable=false class="corner-image">
+  
   <script>
     function showContent(tabId) {
       document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
