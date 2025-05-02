@@ -19,7 +19,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #555556;
+      background-color: #040B06;
       font-family: Arial, sans-serif;
       position: relative;
       z-index: 0;
@@ -27,7 +27,7 @@
 
     .sidebar {
       width: 100%;
-      background: #333;
+      background: #040B06;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
       padding: 10px;
@@ -60,7 +60,7 @@
     }
     .tab {
       padding: 20px;
-      background: #444;
+      background: #9F27EA;
       color: white;
       border: none;
       margin: 8px;
@@ -72,7 +72,7 @@
       min-width: 140px;
     }
     .tab:hover {
-      background: #666;
+      background: #69348A;
       transform: translateY(-3px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
@@ -145,20 +145,25 @@
       text-decoration: underline;
       text-shadow: 0 0 10px #d3d3d3, 0 0 2px #d3d3d3;
     }
-    .toggle-button {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      background-color: #838383;
-      color: white;
-      font-size: 24px;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      z-index: 10000;
-      transition: transform 0.3s ease-in-out;
-    }
+   .toggle-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #9F27EA;
+  color: white;
+  font-size: 26px;
+  border: none;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.3s ease-in-out;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   </style>
 </head>
 <body>
@@ -258,37 +263,42 @@
   <script>
     // Load particles config
     particlesJS('particles-js', {
-      particles: {
-        number: { value: 100 },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 2 },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#ffffff",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2
-        }
+  particles: {
+    number: { value: 76 },
+    color: { value: "#9F27EA" },
+    shape: { type: "circle" },
+    opacity: { value: 1 },
+    size: { value: 4 },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 3
+    },
+    move: {
+      enable: true,
+      speed: 0.5
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    },
+    modes: {
+      repulse: {
+        distance: 65,
+        duration: 0.2
       },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "grab" },
-          onclick: { enable: true, mode: "push" }
-        },
-        modes: {
-          grab: { distance: 140, line_linked: { opacity: 1 } },
-          push: { particles_nb: 4 }
-        }
-      },
-      retina_detect: true
-    });
+      push: {
+        particles_nb: 4
+      }
+    }
+  },
+  retina_detect: true
+});
 
     function showContent(tabId) {
       document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
