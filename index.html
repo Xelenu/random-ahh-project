@@ -288,19 +288,35 @@ work
     </div>
   </div>
 
-  <div class="sidebar">
-    <div class="tabs-wrapper">
-      <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
-      <button class="tab" onclick="showContent('tab-2')"><b>Codey 🟣</b></button>
-      <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
-      <button class="tab" onclick="showContent('tab1')"><u>Chesao Translator*</u></button>
-      <button class="tab" onclick="showContent('tab-1')"><u>Yapish Translator*</u></button>
-      <button class="tab" onclick="showContent('tab3')">Updates**</button>
-    </div>
-    <b class="sussy-text">Language(s) made by Ash, produced by <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a></b>
-    <b class="sussy-text">*Not always accurate</b>
-    <i class="sussy-text">**Sometimes not up to date</i>
+ <div class="sidebar">
+  <div class="tabs-wrapper">
+    <button class="tab" onclick="showContent('tab0')"><i>Information</i></button>
+    <button class="tab" onclick="showContent('tab-2')"><b>Codey 🟣</b></button>
+    <button class="tab" onclick="showContent('tab2')"><b>Speech/Writing</b></button>
+    <button class="tab" onclick="showContent('tab1')"><u>Chesao Translator*</u></button>
+    <button class="tab" onclick="showContent('tab-1')"><u>Yapish Translator*</u></button>
+    <button class="tab" onclick="showContent('tab3')">Updates**</button>
   </div>
+
+  <b class="sussy-text">Language(s) made by Ash, produced by 
+    <a href="https://wilburz.com" target="_blank" class="skibidi-link">WZ LLC</a>
+  </b>
+  <b class="sussy-text">*Not always accurate</b>
+  <i class="sussy-text">**Sometimes not up to date</i>
+
+  <!-- ✅ CounterAPI inserted here -->
+  <div class="counterapi"
+       key="ashlangs/sidebar"
+       icon="eye"
+       label="visits"
+       startNumber="0"
+       abbreviate="true"
+       style="margin-top: 15px; min-height: 44px;">
+  </div>
+</div>
+
+<!-- ✅ Add this just before </body> -->
+<script src="https://counterapi.com/c.js" async></script>
 
   <button class="toggle-button" id="toggleButton" onclick="toggleSidebar()">v</button>
 
