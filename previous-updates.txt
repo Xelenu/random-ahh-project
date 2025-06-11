@@ -29,7 +29,7 @@ man
 woman
 women
 
-Added these prefixes:
+Added these suffixes:
 
 less - du
 ity - lo
