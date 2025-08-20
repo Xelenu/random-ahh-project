@@ -166,11 +166,11 @@ var englishPlaceholderText = document.querySelector("#english-text").getAttribut
 function translateWithWebWorker(text, direction) {
 
   if(direction === "backward") {
-    $("#english-text").css('background-image',"url(/img/loading_nice.gif)");
+    $("#english-text").css('background-image',"url(/selfhosted/chesao/img/loading_nice.gif)");
     $("#english-text").attr("placeholder", "");
   }
   else {
-    $("#ghetto-text").css('background-image',"url(/img/loading_nice.gif)");
+    $("#ghetto-text").css('background-image',"url(/selfhosted/chesao/img/loading_nice.gif)");
     $("#ghetto-text").attr("placeholder","");
   }
 
